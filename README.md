@@ -39,7 +39,7 @@ A visually striking web application that transforms GitHub profiles into beautif
 
 1. Clone the repository
 ```bash
-git clone <your-repo-url>
+git clone <https://github.com/ananyaxgupta/dna-code-verse>
 cd code-dna-visualizer
 ```
 
@@ -107,7 +107,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🙏 Acknowledgments
 
-- Built with [Lovable](https://lovable.dev)
 - Visualization libraries: Three.js and D3.js
 - UI components from shadcn/ui
-
