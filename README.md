@@ -1,73 +1,113 @@
-# Welcome to your Lovable project
 
-## Project info
+# Code DNA Visualizer 🧬
 
-**URL**: https://lovable.dev/projects/85d688d0-7703-4dd1-bd7b-bedefe380bda
+A visually striking web application that transforms GitHub profiles into beautiful interactive visualizations, representing repositories and contributions through creative patterns like DNA helixes, galaxies, and tree structures.
 
-## How can I edit this code?
+## ✨ Features
 
-There are several ways of editing your application.
+- **Multiple Visualization Modes**
+  - 🧬 DNA Helix: Represents repositories in a spiraling double-helix pattern
+  - 🌌 Galaxy: Shows repos as stars in a cosmic visualization
+  - 🌳 Tree: Displays contributions in a hierarchical tree structure
 
-**Use Lovable**
+- **GitHub Integration**
+  - Search any GitHub username
+  - View public repository statistics
+  - Language distribution analysis
+  - Real-time data fetching
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/85d688d0-7703-4dd1-bd7b-bedefe380bda) and start prompting.
+- **Interactive Elements**
+  - Smooth animations and transitions
+  - Hover effects with detailed information
+  - Export visualizations as images
+  - Responsive design for all devices
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Special Features**
+  - Dark/Light mode support
+  - Easter egg for Linux creator
+  - Export visualization capability
+  - Professional UI with toasts and loading states
 
-**Use your preferred IDE**
+## 🚀 Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js (v18 or higher)
+- npm or yarn package manager
 
-Follow these steps:
+### Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+1. Clone the repository
+```bash
+git clone <your-repo-url>
+cd code-dna-visualizer
 ```
 
-**Edit a file directly in GitHub**
+2. Install dependencies
+```bash
+npm install
+# or
+yarn install
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+3. Start the development server
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-**Use GitHub Codespaces**
+The application will be available at `http://localhost:5173`
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🛠 Tech Stack
 
-## What technologies are used for this project?
+- **Frontend Framework**: React with Vite
+- **Styling**: TailwindCSS
+- **UI Components**: shadcn/ui
+- **Visualization**: Three.js, D3.js
+- **State Management**: TanStack Query
+- **Type Safety**: TypeScript
+- **Routing**: React Router
+- **API Integration**: GitHub REST API
 
-This project is built with:
+## 🎨 Visualization Modes
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### DNA Helix Mode
+Represents repositories as nucleotides in a double helix structure, with:
+- Colors representing different programming languages
+- Size indicating repository activity
+- Interactive animations on hover
 
-## How can I deploy this project?
+### Galaxy Mode
+Displays repositories as stars in a cosmic visualization:
+- Star size based on repository size/activity
+- Colors mapped to primary programming language
+- Interactive star cluster navigation
 
-Simply open [Lovable](https://lovable.dev/projects/85d688d0-7703-4dd1-bd7b-bedefe380bda) and click on Share -> Publish.
+### Tree Mode
+Shows repositories in a hierarchical tree structure:
+- Branch size based on contribution volume
+- Colors indicating programming languages
+- Interactive zooming and panning
 
-## Can I connect a custom domain to my Lovable project?
+## 📱 Responsive Design
 
-Yes, you can!
+The application is fully responsive and works seamlessly on:
+- 💻 Desktop computers
+- 📱 Mobile devices
+- 📟 Tablets
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🤝 Contributing
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- Built with [Lovable](https://lovable.dev)
+- Visualization libraries: Three.js and D3.js
+- UI components from shadcn/ui
+
