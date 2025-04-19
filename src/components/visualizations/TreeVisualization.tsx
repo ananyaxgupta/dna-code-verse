@@ -17,6 +17,14 @@ interface TreeNode {
   children?: TreeNode[];
 }
 
+// Extending the d3.HierarchyNode interface to include treemap-specific properties
+interface TreemapNode extends d3.HierarchyNode<TreeNode> {
+  x0?: number;
+  y0?: number;
+  x1?: number;
+  y1?: number;
+}
+
 export function TreeVisualization({ repos, languages }: TreeVisualizationProps) {
   const svgRef = useRef<SVGSVGElement>(null);
 
@@ -83,12 +91,12 @@ export function TreeVisualization({ repos, languages }: TreeVisualizationProps) 
       .append('g')
       .attr('transform', `translate(${margin.left},${margin.top})`);
 
-    // Create tree layout
+    // Create hierarchy from data
     const root = d3.hierarchy(treeData)
       .sum(d => d.value)
-      .sort((a, b) => b.value! - a.value!);
+      .sort((a, b) => (b.value || 0) - (a.value || 0)) as TreemapNode;
 
-    // Create TreeMap layout
+    // Apply treemap layout
     d3.treemap<TreeNode>()
       .size([innerWidth, innerHeight])
       .padding(4)
@@ -103,8 +111,8 @@ export function TreeVisualization({ repos, languages }: TreeVisualizationProps) 
 
     // Add rectangles for each leaf node
     leaf.append('rect')
-      .attr('width', d => d.x1 - d.x0)
-      .attr('height', d => d.y1 - d.y0)
+      .attr('width', d => (d.x1 || 0) - (d.x0 || 0))
+      .attr('height', d => (d.y1 || 0) - (d.y0 || 0))
       .attr('fill', d => d.data.color)
       .attr('stroke', '#ffffff')
       .attr('stroke-width', 1)

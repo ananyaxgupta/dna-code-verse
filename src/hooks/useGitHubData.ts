@@ -49,10 +49,10 @@ export function useGitHubData(): [
       const repos = await fetchUserRepos(username);
       
       // Fetch languages for each repository (in parallel for better performance)
-      const languagePromises: Promise<[string, Record<string, number>]>[] = repos.map(
+      const languagePromises = repos.map(
         repo => fetchRepoLanguages(`${username}/${repo.name}`)
-          .then(languages => [repo.name, languages])
-          .catch(() => [repo.name, {}]) // Handle errors for individual repos
+          .then(languages => [repo.name, languages] as [string, Record<string, number>])
+          .catch(() => [repo.name, {}] as [string, Record<string, number>]) // Handle errors for individual repos
       );
       
       const repoLanguages = Object.fromEntries(
